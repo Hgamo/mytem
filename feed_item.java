@@ -7,6 +7,6 @@ class FeedItem{
 * ^vst
 */
 	private Date time;
-	private string src; 
+	private String src; 
 	
 }
