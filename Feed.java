@@ -27,5 +27,19 @@ public class Feed extends List<FeedItem> {
       next();
     }
   }
+  
+  public void teilListe() {
+    
+  }
+  
+  public void sortierFunktion() {
+    
+  }
+  
+  public void weiteres() {
+    
+  }
+  
+  
 
 }
