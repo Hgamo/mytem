@@ -43,18 +43,16 @@ public class Feed extends List<FeedItem> {
     System.out.println("Es wurde KEIN (weiteres) Element in Liste gefunden");
   }
 
-  public void suchFunktionPerID (int gesucht) {
-    gesucht = gesucht.this;
-    Node current = head;
-    while (current != null){ 
-      if (current.id == gesucht) {
-        return true;
-        System.out.println("Es wurde ein Element mit der ID " gesucht " am Knoten " current " in Liste gefunden");}
-      else{
-        current = current.next; }
-      } 
-      return false;
-      System.out.println("Es wurde KEIN (weiteres) Element mit der ID " gesucht " in Liste gefunden");
+  public void suchFunktionPerID(int gesucht) {
+    toFirst();
+    while (hasAccess()) {
+      if (getContent().getId() == gesucht) {
+        System.out.println("Es wurde ein Element " + getContent().toString() + " in der Liste gefunden");
+      }
+      next();
+
+    }
+    System.out.println("Es wurde KEIN (weiteres) Element in Liste gefunden");
   }
 
   public void weiteres() {
