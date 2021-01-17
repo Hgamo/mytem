@@ -38,13 +38,13 @@ public class Feed extends List<FeedItem> {
 
   }
 /**
-	 * Suchfunktion über Zeit
-	 * 
-	 * @param gesucht Die gesuchte Zeit
-   *
-   * Die Funktion vergleicht den Inhalt bei jedem Knoten mit dem gesuchten Wert und schreitet bei fehlender Übereinstimmung die Knoten weiter ab. Die Funktion gibt aus, ob ein Ergebnis gefunden wurde oder nicht und verweist dabei auf den Inhalt bei dem Knoten.
-   *
-   * @author Vitus
+	* Suchfunktion über Zeit
+	* 
+	* @param gesucht Die gesuchte Zeit (Eegen des LocalDateTime Formats ist eine sehr genaue Angabe nötig, alternativ kann auch eine Zeitspanne für grobe Angaben implementiert werden)
+	*
+	* Die Funktion vergleicht den Inhalt bei jedem Knoten mit dem gesuchten Wert und schreitet bei fehlender Übereinstimmung die Knoten weiter ab. Die Funktion gibt aus, ob ein Ergebnis gefunden wurde oder nicht und verweist dabei auf den Inhalt bei dem Knoten.
+	*
+	* @author Vitus
 	 */
   public void suchFunktionPerZeit(LocalDateTime gesucht) {
     toFirst();
@@ -57,13 +57,13 @@ public class Feed extends List<FeedItem> {
     System.out.println("Es wurde KEIN (weiteres) Item im Feed gefunden");
   }
 /**
-	 * Suchfunktion über ID
-	 * 
-	 * @param gesucht Die gesuchte ID
-   *
-   * Die Funktion vergleicht den Inhalt bei jedem Knoten mit dem gesuchten Wert und schreitet bei fehlender Übereinstimmung die Knoten weiter ab. Die Funktion gibt aus, ob ein Ergebnis gefunden wurde oder nicht und verweist dabei auf den Inhalt bei dem Knoten.
-   *
-   * @author Vitus
+	* Suchfunktion über ID
+	* 
+	* @param gesucht Die gesuchte ID
+	*
+	* Die Funktion vergleicht den Inhalt bei jedem Knoten mit dem gesuchten Wert und schreitet bei fehlender Übereinstimmung die Knoten weiter ab. Die Funktion gibt aus, ob ein Ergebnis gefunden wurde oder nicht und verweist dabei auf den Inhalt bei dem Knoten.
+	*
+	* @author Vitus
 	 */
   public void suchFunktionPerID(int gesucht) {
     toFirst();
