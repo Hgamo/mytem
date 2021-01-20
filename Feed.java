@@ -18,12 +18,16 @@ public class Feed extends List<FeedItem> {
     toLast();
     append(feedItem);
   }
-/**
-	* Langer Output
-	* 
-	* Die Funktion gibt die Attribute jedes Items aus. Ausgegeben werden zuerst die Eigenschaften des ersten Items als String, danach wandert die Funktion alle Knoten dahinter ab.
-	* @author Gareth, Fabian, Vitus
-	 */
+
+  /**
+   * Langer Output
+   * 
+   * Die Funktion gibt die Attribute jedes Items aus. Ausgegeben werden zuerst die
+   * Eigenschaften des ersten Items als String, danach wandert die Funktion alle
+   * Knoten dahinter ab.
+   * 
+   * @author Gareth, Fabian, Vitus
+   */
   public void printOutputLong() {
     toFirst();
     while (hasAccess()) {
@@ -31,17 +35,26 @@ public class Feed extends List<FeedItem> {
       next();
     }
   }
-/**
-	* Kurzer Output
-	* 
-	* Die Funktion gibt die Anzahl der Knoten der dynamischen Liste Feed, gleichbedeutend mit Items, als String aus. Die Zähl-Funktion ist bereits in Java integriert.
-	*
-	* @author Vitus
-	 */
+
+  /**
+   * Kurzer Output
+   * 
+   * Die Funktion gibt die Anzahl der Knoten der dynamischen Liste Feed,
+   * gleichbedeutend mit Items, als String aus. Die Zähl-Funktion ist bereits in
+   * Java integriert.
+   *
+   * @author Vitus
+   */
   public void printOutputShort() {
-    
-      System.out.println(Feed.countNodes().toString() + " Items im Feed");
-    
+    int count = 0;
+    toFirst();
+    while (hasAccess()) {
+      count++;
+      next();
+    }
+
+    System.out.println(count + " Items im Feed");
+
   }
 
   public Feed alleFeedItemsVonEinemTag(LocalDateTime day) {
