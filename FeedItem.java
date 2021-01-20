@@ -17,11 +17,10 @@ public class FeedItem {
 	private int id;
 
 	/**
-	 * Der Construktor der Klasse FeedItem
-	 * Den Instanzvariablen werden Beispiele
+	 * Der Construktor der Klasse FeedItem Den Instanzvariablen werden Beispiele
 	 * zugewiesen, wobei auch eine ID erzeugt wird, die maxiaml 9-stellig ist. Die
-	 * Wahrscheinlichkeit, dass zwei Feed-Items die gleiche ID haben, ist seht gering
-	 * und damit vernachläßigbar.
+	 * Wahrscheinlichkeit, dass zwei Feed-Items die gleiche ID haben, ist seht
+	 * gering und damit vernachläßigbar.
 	 */
 	public FeedItem() {
 		time = LocalDateTime.now();
@@ -93,9 +92,9 @@ public class FeedItem {
 	 * @return den Wahrheitswert
 	 */
 
-	public boolean isFromSameData(LocalDateTime compareFeedItemDate) {
+	public boolean isFromSameDay(LocalDateTime compareFeedItemDate) {
 		if (compareFeedItemDate.getDayOfYear() == time.getDayOfYear()
-				|| compareFeedItemDate.getYear() == time.getYear()) {
+				&& compareFeedItemDate.getYear() == time.getYear()) {
 			return true;
 		} else {
 			return false;
